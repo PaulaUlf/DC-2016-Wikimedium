@@ -4,7 +4,10 @@
 }
 
 .galleryRail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
@@ -29,8 +32,14 @@
 
 .galleryNav {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   height: calc(100% - 51px);
@@ -47,11 +56,12 @@
 
 .galleryNav .disabled {
   opacity: 0;
+  cursor: default;
 }
 
 .galleryNav div::before,
 .galleryNav div::after {
-  content: "";
+  content: '';
   position: absolute;
   background: black;
 }
@@ -67,8 +77,11 @@
 }
 
 #prev {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-#next{
+
+#next {
+  -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
